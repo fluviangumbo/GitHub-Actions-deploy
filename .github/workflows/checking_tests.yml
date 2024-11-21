@@ -3,8 +3,8 @@ name: Pull Request to Develop Branch
 on: 
   pull_request:
     branches:
-      -develop
-      -staging
+      - develop
+      - staging
 
 jobs:
   test:
