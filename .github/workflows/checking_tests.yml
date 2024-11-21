@@ -1,0 +1,25 @@
+name: Pull Request to Develop Branch
+
+on: 
+  pull_request:
+    branches:
+      -develop
+      -staging
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout a Branch
+        uses: actions/checkout@v1
+      
+      - name: Use Node 21
+        uses: actions/setup-node@v1
+        with:
+          node-version: 21.x
+      
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter
+        run: npm run lint
