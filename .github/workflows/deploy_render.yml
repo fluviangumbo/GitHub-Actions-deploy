@@ -1,5 +1,8 @@
 name: Deploy to Render
 
+env:
+  deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
 on:
   push:
     branches: [main]
@@ -20,7 +23,5 @@ jobs:
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
-        env:
-          deploy-url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
-          curl "$deploy-url"
+          curl "$deploy_url"
