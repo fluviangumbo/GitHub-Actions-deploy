@@ -12,7 +12,7 @@ jobs:
     name: Deploy to Render
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkoutv3
+      - uses: actions/checkout@v4
       - name: Test
         run: |
           npm install
