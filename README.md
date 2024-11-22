@@ -20,11 +20,11 @@ You can access the live application here: https://github-actions-deploy.onrender
 
 When a pull request is made from a feature breanch to the develop branch, a check is triggered automatically using GitHub Actions that verifies the integrity of the quiz application used to demonstrate the functionality of the workflows. 
 
-![GitHub Actions Testing Workflow.](./Assets/image-url.png)
+![GitHub Actions Testing Workflow.](./Assets/pull-request-demo.png)
 
 When another PR is made from the develop branch to the main branch, another set of checks are run and the application triggers a new Render deployment upon merge.
 
-![GitHub Actions Deployment Workflow.](./Assets/image-url.png)
+![GitHub Actions Deployment Workflow.](./Assets/deploy-demo.png)
 
 ## Contributing
 
