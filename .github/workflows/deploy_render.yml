@@ -18,18 +18,9 @@ jobs:
           npm install
           npm run test-component
 
-      - name: Debug Deploy URL
-        run: |
-          if [ -z "$deploy-url" ]; then
-            echo "Error: deploy-url is not set"
-            exit 1
-          else
-            echo "Deploy URL is configured"
-          fi
-
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         env:
           deploy-url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
-          curl "$deploy_url"
+          curl "$deploy-url"
